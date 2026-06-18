@@ -26,6 +26,8 @@ public class PhoneBook {
     }
 
     public List<String> printAllNames() {
-        return null;
+        return phoneBook.keySet().stream()
+                .sorted()
+                .toList();
     }
 }
