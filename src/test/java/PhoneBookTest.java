@@ -13,4 +13,13 @@ public class PhoneBookTest {
         assertEquals(2, phoneBook.add("Petr", "2"));
         assertEquals(3, phoneBook.add("Sasha", "3"));
     }
+
+    @Test
+    void shouldReturnNameWhenPhoneNumberExists() {
+        PhoneBook phoneBook = new PhoneBook();
+
+        phoneBook.add("Ivan", "1");
+
+        assertEquals("Ivan", phoneBook.findByNumber("1"));
+    }
 }
