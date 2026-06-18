@@ -7,6 +7,8 @@ public class PhoneBook {
     private Map<String, String> phoneBook = new HashMap<>();
 
     public long add(String name, String number) {
-        return 0;
+        phoneBook.put(name, number);
+
+        return phoneBook.size();
     }
 }
